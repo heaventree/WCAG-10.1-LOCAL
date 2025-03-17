@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility Styles */
+body {
+  transition: all 0.3s ease;
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  background-color: black !important;
+  color: white !important;
+  filter: contrast(200%);
+}
+
+/* Reduced Motion */
+body.reduced-motion * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Font Size Variations */
+body.font-normal {
+  font-size: 16px;
+}
+
+body.font-large {
+  font-size: 18px;
+}
+
+body.font-largest {
+  font-size: 20px;
+}
+
+/* Keyboard Focus Styles */
+*:focus {
+  outline: 3px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
